@@ -50,6 +50,8 @@ export const Left = styled.div`
     margin-top: 60px;
 
     h2 {
+      margin-bottom: 20px;
+
       font-size: 32px;
       font-weight: 500;
 
