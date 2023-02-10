@@ -3,6 +3,7 @@ import { Container, ErrorMsg } from './styles';
 import { useState } from 'react';
 import imgEyeSlash from '../../assets/eye-slash.svg';
 import imgEye from '../../assets/eye-solid.svg';
+import { variants } from '../../utils/motionConfig';
 
 export interface InputProps {
   placeholder?: string;
@@ -28,7 +29,7 @@ const Input = ({
   return (
     <>
       {password ? (
-        <Container>
+        <Container variants={variants.item}>
           <div className="password">
             <input
               type={eye ? 'text' : 'password'}
@@ -57,7 +58,7 @@ const Input = ({
           {error && <ErrorMsg>{error.message}</ErrorMsg>}
         </Container>
       ) : (
-        <Container>
+        <Container variants={variants.item}>
           <input
             ref={ref}
             type="email"

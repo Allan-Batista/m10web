@@ -1,3 +1,4 @@
+import { variants } from '../../utils/motionConfig';
 import { Container } from './styles';
 
 interface ButtonProps {
@@ -9,7 +10,7 @@ interface ButtonProps {
 
 const Button = ({ label, loading, onClick, type }: ButtonProps) => {
   return (
-    <Container>
+    <Container variants={variants.item}>
       <button type={type} onClick={onClick}>
         {label}
       </button>

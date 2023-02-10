@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import background from '../../assets/background.svg';
 
@@ -11,7 +12,7 @@ export const Container = styled.div`
   background: #ff6c22;
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: flex;
   width: 957px;
   height: 612px;

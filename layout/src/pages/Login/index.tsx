@@ -8,6 +8,7 @@ import imgComputador from '../../assets/computador.svg';
 import imgLogo from '../../assets/logo.svg';
 import Button from '../../components/Button';
 import InputControled from '../../components/InputControled';
+import { variants } from '../../utils/motionConfig';
 
 import { Container, Content, Left, Right } from './styles';
 
@@ -35,7 +36,6 @@ const Login: React.FC = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { email, password } = data;
 
-    console.log(data);
     if (email === 'tropadigital@gmail.com' && password === 'admin123') {
       return navigate('/home');
     }
@@ -46,7 +46,11 @@ const Login: React.FC = () => {
   return (
     <>
       <Container>
-        <Content>
+        <Content
+          animate="visible"
+          initial="hidden"
+          variants={variants.container}
+        >
           <Left>
             <div className="logo">
               <img src={imgLogo} />
@@ -75,6 +79,7 @@ const Login: React.FC = () => {
               <Button type="submit" label="Acessar" />
             </form>
           </Left>
+
           <Right>
             <img src={imgComputador} />
           </Right>
