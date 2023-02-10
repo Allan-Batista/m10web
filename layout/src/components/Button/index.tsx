@@ -4,12 +4,15 @@ interface ButtonProps {
   label?: string;
   loading?: boolean;
   onClick?: any;
+  type?: any;
 }
 
-const Button = ({ label, loading, onClick }: ButtonProps) => {
+const Button = ({ label, loading, onClick, type }: ButtonProps) => {
   return (
     <Container>
-      <button onClick={onClick}>{label}</button>
+      <button type={type} onClick={onClick}>
+        {label}
+      </button>
     </Container>
   );
 };

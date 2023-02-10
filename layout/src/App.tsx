@@ -1,7 +1,9 @@
-import Login from './pages/Login';
+import { RouterProvider } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import { router } from './routes/routes';
 
 const App = () => {
-  return <Login />;
+  return <RouterProvider router={router} />;
 };
 
 export default App;

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   margin: 10px 0;
   input {
     width: 313px;
@@ -9,6 +12,7 @@ export const Container = styled.div`
     padding: 0 10px;
 
     font-size: 16px;
+    font-weight: 500;
     font-family: 'Advent Pro', sans-serif;
 
     border-radius: 5px;
@@ -16,7 +20,7 @@ export const Container = styled.div`
 
     outline: none;
 
-    color: rgba(0, 0, 0, 0.35);
+    color: rgba(0, 0, 0, 0.6);
     background: #ffffff;
 
     &::placeholder {
@@ -39,4 +43,11 @@ export const Container = styled.div`
       right: 125px;
     }
   }
+`;
+
+export const ErrorMsg = styled.span`
+  color: red;
+  font-size: 14px;
+
+  margin-top: 8px;
 `;

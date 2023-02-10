@@ -76,7 +76,7 @@ export const Right = styled.div`
     width: 380px;
     height: 380px;
 
-    bottom: 0%;
+    bottom: -1px;
 
     right: 25%;
   }

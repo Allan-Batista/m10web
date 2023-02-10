@@ -1,23 +1,43 @@
-import { Container } from './styles';
+import { Container, ErrorMsg } from './styles';
 
 import { useState } from 'react';
 import imgEyeSlash from '../../assets/eye-slash.svg';
 import imgEye from '../../assets/eye-solid.svg';
 
-interface InputProps {
+export interface InputProps {
   placeholder?: string;
-  senha?: boolean;
+  password?: boolean;
+  value?: any;
+  error?: any;
+  ref?: any;
+  onBlur?: any;
+  onChange?: (value: any) => void;
 }
 
-const Input = ({ placeholder, senha }: InputProps) => {
+const Input = ({
+  placeholder,
+  password,
+  value,
+  error,
+  onChange,
+  onBlur,
+  ref,
+}: InputProps) => {
   const [eye, setEye] = useState<boolean>(false);
 
   return (
     <>
-      {senha ? (
+      {password ? (
         <Container>
           <div className="password">
-            <input type={eye ? 'text' : 'password'} placeholder={placeholder} />
+            <input
+              type={eye ? 'text' : 'password'}
+              value={value}
+              onChange={onChange}
+              onBlur={onBlur}
+              ref={ref}
+              placeholder={placeholder}
+            />
 
             {eye ? (
               <img
@@ -33,10 +53,21 @@ const Input = ({ placeholder, senha }: InputProps) => {
               />
             )}
           </div>
+
+          {error && <ErrorMsg>{error.message}</ErrorMsg>}
         </Container>
       ) : (
         <Container>
-          <input placeholder={placeholder} />
+          <input
+            ref={ref}
+            type="email"
+            onChange={onChange}
+            onBlur={onBlur}
+            placeholder={placeholder}
+            value={value}
+          />
+
+          {error && <ErrorMsg>{error.message}</ErrorMsg>}
         </Container>
       )}
     </>
