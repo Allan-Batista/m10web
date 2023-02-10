@@ -9,6 +9,8 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
+
+  background: #e5e5e5;
 `;
 
 export const Left = styled(motion.div)`
@@ -79,6 +81,4 @@ export const Item = styled(motion.div)<Props>`
 export const Right = styled(motion.div)`
   width: 80%;
   height: 100%;
-
-  background: #e5e5e5;
 `;

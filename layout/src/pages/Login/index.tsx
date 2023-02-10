@@ -47,12 +47,7 @@ const Login: React.FC = () => {
   return (
     <>
       <Container>
-        <Content
-          variants={variants.container}
-          animate="visible"
-          initial="hidden"
-          exit="exit"
-        >
+        <Content variants={variants.login} animate="visible" initial="hidden">
           <Left>
             <div className="logo">
               <img src={imgLogo} />

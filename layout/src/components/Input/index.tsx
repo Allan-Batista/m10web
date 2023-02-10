@@ -29,7 +29,7 @@ const Input = ({
   return (
     <>
       {password ? (
-        <Container variants={variants.item}>
+        <Container variants={variants.itemLogin}>
           <div className="password">
             <input
               type={eye ? 'text' : 'password'}
@@ -58,7 +58,7 @@ const Input = ({
           {error && <ErrorMsg>{error.message}</ErrorMsg>}
         </Container>
       ) : (
-        <Container variants={variants.item}>
+        <Container variants={variants.itemLogin}>
           <input
             ref={ref}
             type="email"

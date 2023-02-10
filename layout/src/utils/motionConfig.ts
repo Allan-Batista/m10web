@@ -1,4 +1,4 @@
-const containerVariants = {
+const loginContainer = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
     opacity: 1,
@@ -11,11 +11,9 @@ const containerVariants = {
       staggerChildren: 0.4,
     },
   },
-
-  exit: { scale: 0 },
 };
 
-const itemVariants = {
+const itemLogin = {
   hidden: { y: 30, opacity: 0 },
   visible: {
     y: 0,
@@ -23,7 +21,37 @@ const itemVariants = {
   },
 };
 
+// Home animations
+
+const homeContainer = {
+  hidden: { x: -200 },
+  visible: {
+    x: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 70,
+      delay: 0.2,
+      delayChildren: 0.7,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemHome = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 70,
+    },
+  },
+};
+
 export const variants = {
-  container: containerVariants,
-  item: itemVariants,
+  login: loginContainer,
+  itemLogin: itemLogin,
+
+  home: homeContainer,
+  itemHome: itemHome,
 };

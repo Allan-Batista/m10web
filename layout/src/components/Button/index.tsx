@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const Button = ({ label, loading, onClick, type }: ButtonProps) => {
   return (
-    <Container variants={variants.item}>
+    <Container variants={variants.itemLogin}>
       <button type={type} onClick={onClick}>
         {label}
       </button>
