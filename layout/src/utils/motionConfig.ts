@@ -11,6 +11,8 @@ const containerVariants = {
       staggerChildren: 0.4,
     },
   },
+
+  exit: { scale: 0 },
 };
 
 const itemVariants = {

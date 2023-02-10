@@ -36,8 +36,9 @@ const Login: React.FC = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { email, password } = data;
 
+    navigate('/home');
     if (email === 'tropadigital@gmail.com' && password === 'admin123') {
-      return navigate('/home');
+      return;
     }
 
     toast.error('Usuario invalido');
@@ -47,9 +48,10 @@ const Login: React.FC = () => {
     <>
       <Container>
         <Content
+          variants={variants.container}
           animate="visible"
           initial="hidden"
-          variants={variants.container}
+          exit="exit"
         >
           <Left>
             <div className="logo">
