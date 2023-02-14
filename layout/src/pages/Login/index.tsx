@@ -36,8 +36,8 @@ const Login: React.FC = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { email, password } = data;
 
-    navigate('/home');
     if (email === 'tropadigital@gmail.com' && password === 'admin123') {
+      navigate('/home');
       return;
     }
 

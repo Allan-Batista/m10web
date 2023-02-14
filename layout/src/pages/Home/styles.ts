@@ -81,4 +81,48 @@ export const Item = styled(motion.div)<Props>`
 export const Right = styled(motion.div)`
   width: 80%;
   height: 100%;
+
+  padding: 60px 0 60px 16px;
+
+  color: rgba(0, 0, 0, 0.44);
+
+  span {
+    font-size: 30px;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 28px;
+
+    background: rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const Grid = styled(motion.div)`
+  display: grid;
+
+  margin-top: 26px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+`;
+
+export const ListItems = styled(motion.div)`
+  display: flex;
+  width: 385px;
+
+  padding: 10px;
+  font-size: 14px;
+
+  border-radius: 8px;
+  flex-direction: column;
+
+  color: #000;
+  background: white;
+
+  span {
+    margin-top: 4px;
+    font-size: 12px;
+  }
 `;

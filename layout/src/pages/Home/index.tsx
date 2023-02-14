@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
-import { Container, Item, Left, Logo, Right } from './styles';
+import { Container, Grid, Item, Left, ListItems, Logo, Right } from './styles';
 
 import imgContato from '../../assets/contato.svg';
 import imgInicio from '../../assets/inicio.svg';
 import imgLogo from '../../assets/logo.svg';
 import imgRelatorios from '../../assets/relatorios.svg';
+import imgThumb from '../../assets/thumb.png';
 import { variants } from '../../utils/motionConfig';
 
-interface ItemsProps {
+interface MenuItemsProps {
   img: string;
   label: string;
   active: boolean;
 }
 
+interface ListItemsProps {
+  img: string;
+  title: string;
+  label: string;
+  time: number;
+}
+
 const Home: React.FC = () => {
   const [active, setActive] = useState<number>(0);
 
-  const items: ItemsProps[] = [
+  const MenuItems: MenuItemsProps[] = [
     { img: imgInicio, label: 'Inicio', active: active === 0 && true },
     { img: imgContato, label: 'Contatos', active: active === 1 && true },
     { img: imgRelatorios, label: 'Relatórios', active: active === 2 && true },
@@ -25,7 +33,45 @@ const Home: React.FC = () => {
     { img: imgContato, label: 'Contatos', active: active === 5 && true },
   ];
 
-  const handleActive = (item: ItemsProps, index: number) => {
+  const listItems: ListItemsProps[] = [
+    {
+      img: imgThumb,
+      title:
+        'Lorem Ipsum is simply dummy text of the printing and typesettin...',
+      label: 'Lorem Ipsum is simply dummy text of the printing and typesettin.',
+      time: 2,
+    },
+    {
+      img: imgThumb,
+      title:
+        'Lorem Ipsum is simply dummy text of the printing and typesettin...',
+      label: 'Lorem Ipsum is simply dummy text of the printing and typesettin.',
+      time: 2,
+    },
+    {
+      img: imgThumb,
+      title:
+        'Lorem Ipsum is simply dummy text of the printing and typesettin...',
+      label: 'Lorem Ipsum is simply dummy text of the printing and typesettin.',
+      time: 2,
+    },
+    {
+      img: imgThumb,
+      title:
+        'Lorem Ipsum is simply dummy text of the printing and typesettin...',
+      label: 'Lorem Ipsum is simply dummy text of the printing and typesettin.',
+      time: 2,
+    },
+    {
+      img: imgThumb,
+      title:
+        'Lorem Ipsum is simply dummy text of the printing and typesettin...',
+      label: 'Lorem Ipsum is simply dummy text of the printing and typesettin.',
+      time: 2,
+    },
+  ];
+
+  const handleActive = (item: MenuItemsProps, index: number) => {
     setActive(index);
   };
 
@@ -36,7 +82,7 @@ const Home: React.FC = () => {
           <img src={imgLogo} alt="tropa digital" />
         </Logo>
 
-        {items.map((item, index) => (
+        {MenuItems.map((item, index) => (
           <Item
             key={index}
             active={item.active}
@@ -49,7 +95,24 @@ const Home: React.FC = () => {
         ))}
       </Left>
 
-      <Right></Right>
+      <Right>
+        <span>
+          Olá, <strong> Tropa Digital </strong>
+        </span>
+
+        <div className="line"></div>
+
+        <Grid>
+          {listItems.map((item, index) => (
+            <ListItems key={index}>
+              <img src={item.img} alt="img" />
+
+              <h3>{item.title}</h3>
+              <span>{item.label}</span>
+            </ListItems>
+          ))}
+        </Grid>
+      </Right>
     </Container>
   );
 };
