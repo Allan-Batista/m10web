@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components';
+import { motion } from "framer-motion";
+import styled, { css } from "styled-components";
 
 interface Props {
   active: boolean;
@@ -80,5 +80,65 @@ export const Item = styled(motion.div)<Props>`
 
 export const Right = styled(motion.div)`
   width: 80%;
-  height: 100%;
+
+  padding: 5% 5%;
+`;
+
+export const TitleRight = styled(motion.div)`
+  font-size: 25px;
+
+  color: #8f8f8f;
+
+  span {
+    font-weight: bold;
+  }
+`;
+
+export const Line = styled(motion.div)`
+  height: 2px;
+
+  margin: 25px 0 25px 0;
+
+  background-color: #dbdbdb;
+`;
+
+export const BoxCard = styled(motion.div)`
+  display: flex;
+
+  width: 100%;
+  
+  flex-wrap: wrap;
+  gap: 20px;
+
+`;
+
+
+export const Card = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+
+  flex: 400px;
+  padding: 2%;
+
+  border-radius: 5px;
+
+  background-color: #ffffff;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 10px;
+  }
+
+  h3{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+  }
+
+  h4{
+    font-size: 12px;
+  }
 `;

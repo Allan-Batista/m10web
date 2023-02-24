@@ -67,14 +67,14 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   position: relative;
-  width: 40%;
+  width: 45%;
   height: 100%;
 
   background-image: url(${background});
 
   img {
     position: absolute;
-    width: 380px;
+    width: 450px;
     height: 380px;
 
     bottom: -1px;
