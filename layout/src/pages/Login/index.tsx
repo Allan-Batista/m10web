@@ -38,6 +38,10 @@ const Login: React.FC = () => {
 
     if (email === 'tropadigital@gmail.com' && password === 'admin123') {
       navigate('/home');
+<<<<<<< HEAD
+=======
+      return;
+>>>>>>> 0bcde7f3d430b32000a8d3ec34d4fdc8c36a6866
     }
 
     toast.error('Usuario invalido');

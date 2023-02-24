@@ -31,8 +31,8 @@ const homeContainer = {
       type: 'spring',
       stiffness: 70,
       delay: 0.2,
-      delayChildren: 0.7,
-      staggerChildren: 0.3,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 };
